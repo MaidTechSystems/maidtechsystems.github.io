@@ -250,6 +250,9 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
+.bottomCardbox {
+  display:grid;
+}
 .cardBox .card {
   position: relative;
   background: rgba(255, 255, 255, 0.592);
@@ -340,7 +343,7 @@ body {
 }
 
 .cardBox .card:hover {
-  background: var(--blue);
+  background: #26a143;
 }
 .cardBox .card:hover .numbers,
 .cardBox .card:hover .cardName,
@@ -395,6 +398,20 @@ body {
   color: #1c3d2a;
 }
 
+.circular-progress3 {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.value-container3 {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  color: #1c3d2a;
+}
 /* ================== Table ============== */
 .table{
   width: 95%;
@@ -794,6 +811,21 @@ text-align: center;
   }
   .value-container {
     font-size: 50px;
+  }
+
+  .circular-progress3 {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+  .value-container3 {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: #1c3d2a;
   }
 
   .main .tablediv{

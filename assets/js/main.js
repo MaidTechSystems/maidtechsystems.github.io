@@ -30,17 +30,17 @@ toggle.onclick = function () {
     datasets: [
         {
             label: "Total",
-            
+            backgroundColor:"#ff0000be",
             data: [50,100]
         },
         {
             label: "Ongoing",
-            
+            backgroundColor:"orange",
             data: [35,85]
         },
         {
             label: "Completed",
-            
+            backgroundColor:"#00ff59bf",
             data: [25,65]
         }
     ]
@@ -50,15 +50,26 @@ var myBarChart = new Chart(ctx, {
     type: 'bar',
     data: data,
     options: {
+      plugins: {
+        legend: {
+            display: false
+        },
+    },
       //indexAxis: 'y',
         barValueSpacing: 20,
         scales: {
           x: {
+            ticks:{
+              color: 'black'
+            },
             grid: {
               display: false
             }
           },
           y: {
+            ticks:{
+              color: 'black'
+            },
             grid: {
               display: false
             }
@@ -93,10 +104,10 @@ var myBarChart = new Chart(ctx, {
   new Chart(ctx3, {
     type: 'doughnut',
     data: {
-      labels: ['Component 1', 'Component 2', 'Component 3'],
+      labels: ['Finance', 'MRRR', 'Works', 'Health', 'Education', 'Science & Tech', 'Agriculture'],
       datasets: [{
-        label: 'Component Two',
-        data: [12, 19, 3],
+        label: 'Budget',
+        data: [50,100,30,85,25,70,15],
         borderWidth: 1
       }]
     },
@@ -114,7 +125,7 @@ var myBarChart = new Chart(ctx, {
   //ctx.height = 300;
 
   var data = {
-    labels: ["Finance", "RRR", "Works", "Health", "Education", "Science & Tech", "Justice"],
+    labels: ["Finance", "RRR", "Works", "Health", "Education", "Science & Tech", "Agriculture"],
     datasets: [
         {
             label: "Budgeted",
@@ -137,11 +148,17 @@ var myBarChart = new Chart(ctx4, {
         barValueSpacing: 20,
         scales: {
           x: {
+            ticks:{
+              color: 'black'
+            },
             grid: {
               display: false
             }
           },
           y: {
+            ticks:{
+              color: 'black'
+            },
             grid: {
               display: false
             }
@@ -150,7 +167,7 @@ var myBarChart = new Chart(ctx4, {
     }
 });
 
-  //Circular Progress Bar
+  //Circular Progress Bars
 let progressBar = document.querySelector(".circular-progress");
 let valueContainer = document.querySelector(".value-container");
 
@@ -169,6 +186,82 @@ let progress = setInterval(() => {
     clearInterval(progress);
   }
 }, speed);
+
+let progressBar1 = document.querySelector(".circular-progress1");
+let valueContainer1 = document.querySelector(".value-container1");
+
+let progressValue1 = 0;
+let progressEndValue1 = 35;
+let speed1 = 50;
+
+let progress1 = setInterval(() => {
+  progressValue1++;
+  valueContainer1.textContent = `${progressValue1}%`;
+  progressBar1.style.background = `conic-gradient(
+      #00ff59 ${progressValue1 * 3.6}deg,
+      #596d6060 ${progressValue1 * 3.6}deg
+  )`;
+  if (progressValue1 == progressEndValue1) {
+    clearInterval(progress1);
+  }
+}, speed1);
+
+let progressBar2 = document.querySelector(".circular-progress2");
+let valueContainer2 = document.querySelector(".value-container2");
+
+let progressValue2 = 0;
+let progressEndValue2 = 35;
+let speed2 = 50;
+
+let progress2 = setInterval(() => {
+  progressValue2++;
+  valueContainer2.textContent = `${progressValue2}%`;
+  progressBar2.style.background = `conic-gradient(
+      #00ff59 ${progressValue2 * 3.6}deg,
+      #596d6060 ${progressValue2 * 3.6}deg
+  )`;
+  if (progressValue2 == progressEndValue2) {
+    clearInterval(progress2);
+  }
+}, speed2);
+
+let progressBar3 = document.querySelector(".circular-progress3");
+let valueContainer3 = document.querySelector(".value-container3");
+
+let progressValue3 = 0;
+let progressEndValue3 = 35;
+let speed3 = 50;
+
+let progress3 = setInterval(() => {
+  progressValue3++;
+  valueContainer3.textContent = `${progressValue3}%`;
+  progressBar3.style.background = `conic-gradient(
+      #00ff59 ${progressValue3 * 3.6}deg,
+      #596d6060 ${progressValue3 * 3.6}deg
+  )`;
+  if (progressValue3 == progressEndValue3) {
+    clearInterval(progress3);
+  }
+}, speed3);
+
+let progressBar4 = document.querySelector(".circular-progress4");
+let valueContainer4 = document.querySelector(".value-container4");
+
+let progressValue4 = 0;
+let progressEndValue4 = 100;
+let speed4 = 50;
+
+let progress4 = setInterval(() => {
+  progressValue4++;
+  valueContainer4.textContent = `${progressValue4}%`;
+  progressBar4.style.background = `conic-gradient(
+      #00ff59 ${progressValue4 * 3.6}deg,
+      #596d6060 ${progressValue4 * 3.6}deg
+  )`;
+  if (progressValue4 == progressEndValue4) {
+    clearInterval(progress4);
+  }
+}, speed4);
 
 //Responsive Fonts
 function responsiveFonts(){
