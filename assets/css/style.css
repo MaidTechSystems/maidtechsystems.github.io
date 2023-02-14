@@ -42,6 +42,7 @@ body {
   text-align: center;
 }
 
+a {text-decoration: none; }
 
 /* =============== Navigation ================ */
 .navigation {
@@ -497,6 +498,31 @@ text-align: center;
     transform: scale(1.1);
   }
 
+  /* ================== Pillar Page ============== */
+  .main .pillarbox {
+    width: 175%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-left: 100px;
+  }
+  
+  .main .pillarbox .pillarcard {
+    position: relative;
+    display: grid;
+    min-height: 200px;
+    padding: 15px;
+  }
+  
+  .main .pillarbox .pillarcard .pillartable {
+  text-align: center;
+  }
+  
+  .main .pillarbox .pillarcard .pillartable tr td{
+    text-align: center;
+    }
+
 /* ================== Order Details List ============== */
 .details {
   position: relative;
@@ -875,6 +901,23 @@ text-align: center;
   .cardBox .card {
     display: grid;
   }
+
+  .main .pillarbox {
+    width: 175%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-left: 50px;
+  }
+  
+  .main .pillarbox .pillarcard {
+    position: relative;
+    display: grid;
+    min-height: 200px;
+    padding: 15px;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -905,4 +948,21 @@ text-align: center;
     right: 0;
     left: initial;
   }
+
+  .main .pillarbox {
+    width: 175%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-left: 10px;
+  }
+  
+  .main .pillarbox .pillarcard {
+    position: relative;
+    display: grid;
+    min-height: 200px;
+    padding: 15px;
+  }
+
 }
