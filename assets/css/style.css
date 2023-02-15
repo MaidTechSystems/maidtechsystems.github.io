@@ -227,6 +227,86 @@ a {text-decoration: none; }
   object-fit: cover;
 }
 
+.loginmain{
+  text-align: center;
+  background:rgba(0,0,0,0.7) url('loginbg.jpg');
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  height: 100vh;
+  background-position: 25%;
+}
+
+.loginmain input, button {
+	width: 300px;
+	height: 40px;
+	border:none;
+	outline: none;
+	padding-left: 40px;
+	box-sizing: border-box;
+	font-size: 15px;
+	color: rgb(8, 8, 8);
+	margin-bottom: 40px;
+  border-radius: 10px;
+}
+.loginmain button {
+	padding-left: 0;
+	background-color: var(--blue);
+	letter-spacing: 1px;
+	font-weight: bold;
+	margin-bottom: 70px;
+}
+
+.loginmain button:hover {
+	box-shadow: 2px 2px 5px #555;
+	background-color: var(--blue);
+}
+.loginmain input:hover {
+	box-shadow: 2px 2px 5px #555;
+	background-color: #ddd;
+}
+
+.loginmain span {
+	position: relative;
+}
+
+.loginmain i {
+	position: absolute;
+	left: 15px;
+	color: #333;
+	font-size: 16px;
+	top: 2px;
+}
+.logincontainer {
+	width: 380px;
+  height: 500px;
+	margin:7% auto;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.592);
+	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.logincardbox{ 
+  grid-template-columns: 1fr;
+    width: 100px;
+    height: 350px;
+    padding: 15px;
+    display: flex;
+    grid-gap: 30px;
+    margin-left: 100px;
+}
+.logincardbox .logincard {
+  position: relative;
+  width: 75%;
+  background: rgba(255, 255, 255, 0.592);
+  padding: 15px;
+  border-radius: 20px;
+  display: grid;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
 /* ======================= Cards ====================== */
 .cardBox {
   position: relative;
@@ -883,6 +963,7 @@ text-align: center;
   .recentOrders {
     overflow-x: auto;
   }
+
 }
 
 @media (max-width: 768px) {
