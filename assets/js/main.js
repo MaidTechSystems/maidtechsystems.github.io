@@ -167,6 +167,28 @@ var myBarChart = new Chart(ctx4, {
     }
 });
 
+
+const ctx5 = document.getElementById('myChart5');
+  new Chart(ctx5, {
+    type: 'doughnut',
+    data: {
+      labels: ['Finance', 'MRRR', 'Works', 'Health', 'Education', 'Science & Tech', 'Agriculture'],
+      datasets: [{
+        label: 'Budget',
+        data: [50,100,30,85,25,70,15],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+
   //Circular Progress Bars
 let progressBar = document.querySelector(".circular-progress");
 let valueContainer = document.querySelector(".value-container");
@@ -269,3 +291,28 @@ function responsiveFonts(){
     Chart.defaults.font.size = 25;
   }
 };
+
+
+//Google Charts
+google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }

@@ -578,7 +578,7 @@ text-align: center;
     transform: scale(1.1);
   }
 
-  /* ================== Pillar Page ============== */
+  /* ================== Pillars Page ============== */
   .main .pillarbox {
     width: 175%;
     padding: 10px;
@@ -602,6 +602,20 @@ text-align: center;
   .main .pillarbox .pillarcard .pillartable tr td{
     text-align: center;
     }
+
+/* ================== Budget Page ============== */
+.main .budgetbox {
+    width: 150%;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-left: 150px;
+  }
+    
+  .main .budgetbox .budgetcard {
+      align-items: center;
+  }
 
 /* ================== Order Details List ============== */
 .details {
