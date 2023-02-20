@@ -30,7 +30,7 @@ toggle.onclick = function () {
     datasets: [
         {
             label: "Total",
-            backgroundColor:"#ff0000be",
+            backgroundColor:"#0095ffd5",
             data: [50,100]
         },
         {
@@ -40,7 +40,7 @@ toggle.onclick = function () {
         },
         {
             label: "Completed",
-            backgroundColor:"#00ff59bf",
+            backgroundColor:"#02d34b",
             data: [25,65]
         }
     ]
