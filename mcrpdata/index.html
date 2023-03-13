@@ -326,8 +326,11 @@
     var Financial_Progress = document.getElementById('Financial_Progress').value;
     var Expected_Date_of_Completion = document.getElementById('Expected_Date_of_Completion').value;
     var Actual_Date_of_Completion = document.getElementById('Actual_Date_of_Completion').value;
-   
-    set(ref(database, 'MMCJEREProjects/' + pid), {
+
+    if(pid==""){
+      alert('not saved, please enter a valid Project ID');
+    }else{
+      set(ref(database, 'MMCJEREProjects/' + pid), {
     
     Component: Component,
     Sector: Sector,
@@ -364,5 +367,7 @@
 
    });
    alert('saved');
+    }
+   
   });
 </script>
