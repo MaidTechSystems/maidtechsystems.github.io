@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getDatabase, set, ref ,push, child, onValue} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyC6DSa956w7KaxfcV0837lzllZQJW0Tazo",
+    authDomain: "mcrpmis.firebaseapp.com",
+    databaseURL: "https://mcrpmis-default-rtdb.firebaseio.com",
+    projectId: "mcrpmis",
+    storageBucket: "mcrpmis.appspot.com",
+    messagingSenderId: "400602189174",
+    appId: "1:400602189174:web:ffa531c1863b27ad5b7e57",
+    measurementId: "G-XVKK1CFXS2"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  
+  // Get a reference to the database service
+  const database = getDatabase(app);
+
+  // read data
+  //getData.addEventListener('click',(e) => {
+
+    //$('#myTable td').remove();
+    var rowNum = 0; 
+    const dbRef = ref(database, 'MMCJEREProjects/');
+
+    onValue(dbRef, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+      const childKey = childSnapshot.key;
+      const childData = childSnapshot.val();
+      // ...
+      rowNum += 1; 
+  var row = "<tr><td>" + rowNum + "</td><td>" + childData.ProjectName + "</td><td>" + childData.LGA + "</td> </tr>"
+
+  $(row).appendTo('#myTable');
+      
+      });
+    }, {
+       onlyOnce: true
+    });
+
+
+  //});
+
+
+  // Get the table element
+const table = document.getElementById('myTable');
+
+// Add an event listener to each row
+table.querySelectorAll('tr').forEach(row => {
+  row.addEventListener('click', () => {
+    // Retrieve the data from the clicked row
+    const cells = row.cells;
+    const data = {
+      name: cells[0].innerHTML,
+      age: cells[1].innerHTML,
+      city: cells[2].innerHTML
+    };
+    
+    // Store the data in sessionStorage
+    sessionStorage.setItem('rowData', JSON.stringify(data));
+    
+    // Open a new HTML page
+    window.open('newPage.html');
+  });
+}); 
+      </script>
+
+</head>
+<body>
+    <table id="myTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>25</td>
+            <td>John Doe</td>
+            <td>New York</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>Jane Doe</td>
+            <td>San Francisco</td>
+          </tr>
+        </tbody>
+      </table>
+      
+</body>
+</html>

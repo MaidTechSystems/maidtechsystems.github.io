@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display Selected HTML Table TR Values In Input Text</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            table tr:not(:first-child){
+                cursor: pointer;transition: all .25s ease-in-out;
+            }
+            table tr:not(:first-child):hover{background-color: #ddd;}
+        </style>
+        
+    </head>
+    <body>
+       
+        First Name:<input type="text" name="fname" id="fname"><br><br>
+        Last Name:<input type="text" name="lname" id="lname"><br><br>
+        Age:<input type="text" name="age" id="age"><br><br>
+        
+        <table id="myTable" border="1">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+            
+            <tr>
+                <td>FN1</td>
+                <td>LN1</td>
+                <td>10</td>
+            </tr>
+            
+            <tr>
+                <td>FN2</td>
+                <td>LN2</td>
+                <td>20</td>
+            </tr>
+            
+            <tr>
+                <td>FN3</td>
+                <td>LN3</td>
+                <td>30</td>
+            </tr>
+            
+            <tr>
+                <td>FN4</td>
+                <td>LN4</td>
+                <td>40</td>
+            </tr>
+            
+            <tr>
+                <td>FN5</td>
+                <td>LN5</td>
+                <td>50</td>
+            </tr>
+        </table>
+        
+        <script>
+            // Get the table element
+    const table = document.getElementById('myTable');
+    
+    // Add an event listener to each row
+    table.querySelectorAll('tr').forEach(row => {
+      row.addEventListener('click', () => {
+        // Retrieve the data from the clicked row
+        const cells = row.cells;
+        const data = {
+          name: cells[0].innerHTML,
+          age: cells[1].innerHTML,
+          city: cells[2].innerHTML
+        };
+        
+        // Store the data in sessionStorage
+        sessionStorage.setItem('rowData', JSON.stringify(data));
+        
+        // Open a new HTML page
+        window.open('newPage.html');
+      });
+    });
+          </script>
+         
+        
+    </body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getDatabase, set, ref ,push, child, onValue} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyC6DSa956w7KaxfcV0837lzllZQJW0Tazo",
+    authDomain: "mcrpmis.firebaseapp.com",
+    databaseURL: "https://mcrpmis-default-rtdb.firebaseio.com",
+    projectId: "mcrpmis",
+    storageBucket: "mcrpmis.appspot.com",
+    messagingSenderId: "400602189174",
+    appId: "1:400602189174:web:ffa531c1863b27ad5b7e57",
+    measurementId: "G-XVKK1CFXS2"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  
+  // Get a reference to the database service
+  const database = getDatabase(app);
+
+  // read data
+  //getData.addEventListener('click',(e) => {
+
+    $('#myTable td').remove();
+    var rowNum = 0; 
+    const dbRef = ref(database, 'MMCJEREProjects/');
+    
+    onValue(dbRef, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+      const childKey = childSnapshot.key;
+      const childData = childSnapshot.val();
+      // ...
+      rowNum += 1; 
+  var row = "<tr><td>" + rowNum + "</td><td>" + childData.ProjectName + "</td><td>" + childData.LGA + "</td> </tr>"
+
+  $(row).appendTo('#myTable');
+      
+      });
+    }, {
+       onlyOnce: true
+    });
+
+
+  //});
+
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>User Details</h1>
+<p>Name: <span id="name"></span></p>
+<p>Email: <span id="email"></span></p>
+<p>Phone: <span id="phone"></span></p>
+<script>
+    // Retrieve the clicked user data from localStorage
+var clickedUserData = JSON.parse(localStorage.getItem("clickedUserData"));
+
+// Display the clicked user data on the new page
+document.querySelector("#name").textContent = clickedUserData.name;
+document.querySelector("#email").textContent = clickedUserData.email;
+document.querySelector("#phone").textContent = clickedUserData.phone;
+
+</script>
+</body>
+</html>

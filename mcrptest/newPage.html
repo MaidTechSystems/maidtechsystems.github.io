@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <div id="data"></div>
+        
+        <script>
+          // Retrieve the data from sessionStorage
+          const data = JSON.parse(sessionStorage.getItem('rowData'));
+          
+          // Display the data
+          const dataDiv = document.getElementById('data');
+          dataDiv.innerHTML = `Name: ${data.name}<br>Age: ${data.age}<br>City: ${data.city}`;
+        </script>
+      </body>
+</body>
+</html>

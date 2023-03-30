@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borno State Multisectoral Crisis Recovery Project</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <script type="text/javascript" src="assets/js/lightbox-plus-jquery.min.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="assets/imgs/AF Logo.png">
+                        </span>
+                        <span class="title">Menu</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        <span class="icon">
+                            <ion-icon name="list-outline"></ion-icon>
+                        </span>
+                        <span class="title">Projects</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="finances.html">
+                        <span class="icon">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </span>
+                        <span class="title">Budget</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gis.html">
+                        <span class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </span>
+                        <span class="title">Map</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="title">
+                        <h4>Borno State Multisectoral Crisis Recovery Project</h4>
+                        <h6>Management Information System</h6>
+                    </div>
+
+                <div class="user">
+                    <img src="assets/imgs/AF Logo.png" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Project Table ================== -->
+            <h2>Project Data</h2>
+             <br>
+
+             <div class="details projdatabox">
+                <div class="recentOrders projdatacard">
+
+                    <table class="projdatatable">
+                        <tbody>
+                        <tr>
+                            <td>ID</td>
+                            <td>Project ID</td>
+                        </tr>
+                        <tr>
+                            <td>Component</td>
+                            <td>Component</td>
+                        </tr>
+                        <tr>
+                            <td>Sector</td>
+                            <td>Sector</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td>Project Name</td>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                            <td>Project Description</td>
+                        </tr>
+                        <tr>
+                            <td>Cost $</td>
+                            <td>Cost Dollar</td>
+                        </tr>
+                        <tr>
+                            <td>Cost N</td>
+                            <td>Cost Naira</td>
+                        </tr>
+                        <tr>
+                            <td>LGA</td>
+                            <td>LGA</td>
+                        </tr>
+                        <tr>
+                            <td>Target Beneficiaries</td>
+                            <td>Beneficiaries</td>
+                        </tr>
+                        <tr>
+                            <td>Implementing Agency</td>
+                            <td>Implementing Agency</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Status</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+             </div>
+
+             <!-- ======================= Project Data Tabs ================== -->
+
+             <div class="details projdatabox">
+                <div class="recentOrders projdatacard3">
+
+                    <div class="tabs">
+
+                        <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
+                        <label for="tab1" class="tabs__label">Procurement</label>
+                        <div class="tabs__content">
+
+                            <table class="projdatatable2">
+
+                                <thead>
+                                    <tr>
+                                        <th>Procument Method</th>
+                                        <th>Procument Status</th>
+                                        <th>Contract No.</th>
+                                        <th>Contractor</th>
+                                        <th>Contract Award Date</th>
+                                        <th>Contract Acceptance Date</th>
+                                        <th>Contract Start Date</th>
+                                        <th>Contract Duration</th>
+                                    </tr>
+                                        </thead>
+        
+                                <tbody>
+                                <tr>
+                                    <td>Procument Method</td>
+                                    <td>Procument Status</td>
+                                    <td>Contract No.</td>
+                                    <td>Contractor</td>
+                                    <td>Contract Award Date</td>
+                                    <td>Contract Acceptance Date</td>
+                                    <td>Contract Start Date</td>
+                                    <td>Contract Duration</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
+                        <label for="tab2" class="tabs__label">Finance</label>
+                        <div class="tabs__content">
+
+                            <table class="projdatatable2">
+
+                                <thead>
+                                    <tr>
+                                        <th>Mobilization</th>
+                                        <th>Date</th>
+                                        <th>Payment 1</th>
+                                        <th>Date</th>
+                                        <th>Payment 2</th>
+                                        <th>Date</th>
+                                        <th>Payment 3</th>
+                                        <th>Date</th>
+                                        <th>Payment 4</th>
+                                        <th>Date</th>
+                                        <th>Payment 5</th>
+                                        <th>Date</th>
+                                        <th>Total Payment</th>
+                                        <th>Balance</th>
+                                    </tr>
+                                        </thead>
+        
+                                <tbody>
+                                <tr>
+                                    <td>Amount</td>
+                                    <td>Date</td>
+                                    <td>Amount</td>
+                                    <td>Date</td>
+                                    <td>Amount</td>
+                                    <td>Date</td>
+                                    <td>Amount</td>
+                                    <td>Date</td>
+                                    <td>Amount</td>
+                                    <td>Date</td>
+                                    <td>Amount</td>
+                                    <td>Date</td>
+                                    <td>Total</td>  
+                                    <td>Amount</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+
+                        <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
+                        <label for="tab3" class="tabs__label">Safeguards</label>
+                        <div class="tabs__content">
+
+                            <table class="projdatatable2">
+
+                                <thead>
+                                    <tr>
+                                        <th>Screening Date</th>
+                                        <th>Assesement Category</th>
+                                        <th>WB OPs Triggered</th>
+                                        <th>Site Specific Instruments</th>
+                                        <th>Date of Disclosure</th>
+                                        <th>RAP</th>
+                                        <th>GRM</th>
+                                        <th>GBV</th>
+                                        <th>Labour Influx</th>
+                                    </tr>
+                                </thead>
+        
+                                <tbody>
+                                <tr>
+                                    <td>Date</td>
+                                    <td>Category</td>
+                                    <td>None</td>
+                                    <td>SSI</td>
+                                    <td>Date</td>
+                                    <td>RAP</td>
+                                    <td>GRM</td>
+                                    <td>GBV</td>
+                                    <td>LI</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    
+                    </div>
+
+                </div>
+             </div>
+
+             <!-- ======================= Project Progress Data ================== -->
+
+             <div class="cardBox projdatabox2">
+                <div class="card projdatacard2">
+                    <div>
+                        <div class="circular-progress circular-progress4">
+                        <div class="value-container value-container4">100%</div>
+                        </div><span style="margin-left: 10px;font-weight: 300;">Physical</span>
+                    </div>
+                    <div>
+                        <div class="circular-progress circular-progress4">
+                        <div class="value-container value-container4">100%</div>
+                        </div><span style="margin-left: 10px;font-weight: 300;">Financial</span>
+                    </div>
+                    <div><br><br>
+                        <h5>Project Start Date : </h5><br>
+                        <h5 style="font-weight: 300;">20th May, 2022</h5>
+                    </div>
+                    <div><br><br>
+                        <h5>Expected Date Completion : </h5><br>
+                        <h5 style="font-weight: 300;">2nd December, 2022</h5>
+                    </div>
+                    <div style="margin-right: 10px;"><br><br>
+                        <h5 >Status : </h5><br>
+                        <h5 style="font-weight: 300;">Completed</h5>
+                    </div>
+                    <div><br><br>
+                        <h5>Actual Date of Completion : </h5><br>
+                        <h5 style="font-weight: 300;">20th May, 2022</h5>
+                    </div>
+                </div>
+                </div>
+
+                <div class="gallery">
+                    <a href="assets/imgs/AF Logo.png" data-lightbox="mygallery"><img src="assets/imgs/AF Logo.png"></a>
+                    <a href="assets/imgs/AF Logo.png" data-lightbox="mygallery"><img src="assets/imgs/AF Logo.png"></a>
+                    <a href="assets/imgs/AF Logo.png" data-lightbox="mygallery"><img src="assets/imgs/AF Logo.png"></a>
+                    <a href="assets/imgs/AF Logo.png" data-lightbox="mygallery"><img src="assets/imgs/AF Logo.png"></a>
+                    <a href="assets/imgs/AF Logo.png" data-lightbox="mygallery"><img src="assets/imgs/AF Logo.png"></a>
+                </div>
+
+        </div>
+    </div>
+
+    <!-- =========== Scripts ========= -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
