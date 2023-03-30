@@ -30,7 +30,7 @@ toggle.onclick = function () {
         {
             label: "Total",
             backgroundColor: "#0095ffd5",
-            data: [50,100],
+            data: [45,320],
             datalabels:{
               anchor:'end',
               align:'top',
@@ -40,7 +40,7 @@ toggle.onclick = function () {
         {
             label: "Ongoing",
             backgroundColor:"orange",
-            data: [35,85],
+            data: [4,35],
             datalabels:{
               anchor:'end',
               align:'top',
@@ -50,7 +50,7 @@ toggle.onclick = function () {
         {
             label: "Completed",
             backgroundColor:"#02d34b",
-            data: [25,65],
+            data: [29,284],
             datalabels:{
               anchor:'end',
               align:'top',
@@ -92,7 +92,7 @@ var data = {
       {
           label: "Allocation",
           backgroundColor: "#0095ffd5",
-          data: [50,100],
+          data: [25797771.58,122583237.88],
           datalabels:{
             anchor:'end',
             align:'top',
@@ -102,7 +102,7 @@ var data = {
       {
           label: "Utilization",
           backgroundColor:"#02d34b",
-          data: [35,85],
+          data: [15439401.04,83665966.10],
           datalabels:{
             anchor:'end',
             align:'top',
@@ -139,10 +139,10 @@ var myBarChart = new Chart(ctx2, {
   new Chart(ctx3, {
     type: 'doughnut',
     data: {
-      labels: ['Component 1', 'Component 2', 'Component 3'],
+      labels: ['Component 1', 'Component 2'],
       datasets: [{
         label: 'Allocation',
-        data: [10000000, 23000000, 5000000],
+        data: [25797771.58, 122583237.88],
         borderWidth: 1
       }]
     },
@@ -162,7 +162,7 @@ let progressBar = document.querySelector(".circular-progress");
 let valueContainer = document.querySelector(".value-container");
 
 let progressValue = 0;
-let progressEndValue = 35;
+let progressEndValue = 67;
 let speed = 50;
 
 let progress = setInterval(() => {

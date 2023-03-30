@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borno State Multisectoral Crisis Recovery Project</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <script type="text/javascript" src="assets/js/lightbox-plus-jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.0/chart.min.js" 
+    integrity="sha512-qKyIokLnyh6oSnWsc5h21uwMAQtljqMZZT17CIMXuCQNIfFSFF4tJdMOaJHL9fQdJUANid6OB6DRR0zdHrbWAw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="assets/imgs/AF Logo.png">
+                        </span>
+                        <span class="title">Menu</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        <span class="icon">
+                            <ion-icon name="list-outline"></ion-icon>
+                        </span>
+                        <span class="title">Projects</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="finances.html">
+                        <span class="icon">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </span>
+                        <span class="title">Budget</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gis.html">
+                        <span class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </span>
+                        <span class="title">Map</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="title">
+                        <h4>Borno State Multisectoral Crisis Recovery Project</h4>
+                        <h6>Management Information System</h6>
+                    </div>
+
+                <div class="user">
+                    <img src="assets/imgs/AF Logo.png" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Project Table ================== -->
+            <h2>Project Data</h2>
+             <br>
+
+             <div class="details projdatabox">
+                <div class="recentOrders projdatacard">
+
+                    <table class="projdatatable">
+                        <tbody>
+                        
+                        <tr>
+                            <td>Component</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Sector</td>
+                            <td>Education</td>
+                        </tr>
+                        <tr>
+                            <td>Project Name</td>
+                            <td>Construction of Borno State Library Maiduguri</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Cost $</td>
+                            <td>290,150.24</td>
+                        </tr>
+                        <tr>
+                            <td>Cost N</td>
+                            <td>104,163,934.43</td>
+                        </tr>
+                        <tr>
+                            <td>LGA</td>
+                            <td>MMC</td>
+                        </tr>
+                        <tr>
+                            <td>Community</td>
+                            <td>MMC</td>
+                        </tr>
+                        <tr>
+                            <td>Beneficiaries</td>
+                            <td>41,300</td>
+                        </tr>
+                        <tr>
+                            <td>Implementing Agency</td>
+                            <td>MRRR</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Completed</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+             </div>
+
+             <!-- ======================= Project Data Tabs ================== -->
+
+             <div class="details projdatabox">
+                <div class="recentOrders projdatacard3">
+
+                    <div class="tabs">
+
+                        <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
+                        <label for="tab1" class="tabs__label">Procurement</label>
+                        <div class="tabs__content">
+
+                            <table class="projdatatable2">
+
+                                <thead>
+                                    <tr>
+                                        <th>Procument Method</th>
+                                        <th>Procument Status</th>
+                                        <th>Contract No.</th>
+                                        <th>Contractor</th>
+                                        <th>Contract Award Date</th>
+                                        <th>Contract Acceptance Date</th>
+                                        <th>Contract Start Date</th>
+                                        <th>Contract Duration</th>
+                                    </tr>
+                                        </thead>
+        
+                                <tbody>
+                                <tr>
+                                    <td>RFQ</td>
+                                    <td>Cleared</td>
+                                    <td>BOMCRP/RFQ/CW/101/09/VOL.1</td>
+                                    <td>DAMARAM DESIGN & CONS. LTD</td>
+                                    <td>22/7/2019</td>
+                                    <td>23/7/2019</td>
+                                    <td>25/7/2019</td>
+                                    <td>180 days Days</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
+                        <label for="tab2" class="tabs__label">Finance</label>
+                        <div class="tabs__content">
+
+                            <table class="projdatatable2">
+
+                                <thead>
+                                    <tr>
+                                        <th>Mobilization</th>
+                                        <th>Date</th>
+                                        <th>Payment 1</th>
+                                        <th>Date</th>
+                                        <th>Payment 2</th>
+                                        <th>Date</th>
+                                        <th>Payment 3</th>
+                                        <th>Date</th>
+                                        <th>Payment 4</th>
+                                        <th>Date</th>
+                                        <th>Payment 5</th>
+                                        <th>Date</th>
+                                        <th>Total Payment</th>
+                                        <th>Balance</th>
+                                    </tr>
+                                        </thead>
+        
+                                <tbody>
+                                <tr>
+                                    <td>Amount</td>
+                                    <td>Date</td>
+                                    <td>Amount</td>
+                                    <td>Date</td>
+                                    <td>Amount</td>
+                                    <td>Date</td>
+                                    <td>Amount</td>
+                                    <td>Date</td>
+                                    <td>Amount</td>
+                                    <td>Date</td>
+                                    <td>Amount</td>
+                                    <td>Date</td>
+                                    <td>Total</td>  
+                                    <td>Amount</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+
+                        <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
+                        <label for="tab3" class="tabs__label">Safeguards</label>
+                        <div class="tabs__content">
+
+                            <table class="projdatatable2">
+
+                                <thead>
+                                    <tr>
+                                        <th>Screening Date</th>
+                                        <th>Assesement Category</th>
+                                        <th>WB OPs Triggered</th>
+                                        <th>Site Specific Instruments</th>
+                                        <th>Date of Disclosure</th>
+                                        <th>RAP</th>
+                                        <th>GRM</th>
+                                        <th>GBV</th>
+                                        <th>Labour Influx</th>
+                                    </tr>
+                                </thead>
+        
+                                <tbody>
+                                <tr>
+                                    <td>11/08/2018</td>
+                                    <td>Category B</td>
+                                    <td>ESA</td>
+                                    <td>ESMP</td>
+                                    <td>25/01/2020</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    
+                    </div>
+
+                </div>
+             </div>
+
+             <!-- ======================= Project Progress Data ================== -->
+
+             <div class="cardBox projdatabox2">
+                <div class="card projdatacard2">
+                    <div>
+                        <div class="circular-progress circular-progress4">
+                        <div class="value-container value-container4">100%</div>
+                        </div><span style="margin-left: 10px;font-weight: 300;">Physical</span>
+                    </div>
+                    <div>
+                        <div class="circular-progress circular-progress4">
+                        <div class="value-container value-container4">100%</div>
+                        </div><span style="margin-left: 10px;font-weight: 300;">Financial</span>
+                    </div>
+                    <div><br><br>
+                        <h5>Project Start Date : </h5><br>
+                        <h5 style="font-weight: 300;">25/7/2019</h5>
+                    </div>
+                    <div><br><br>
+                        <h5>Expected Date of Completion : </h5><br>
+                        <h5 style="font-weight: 300;">-</h5>
+                    </div>
+                    <div style="margin-right: 10px;"><br><br>
+                        <h5 >Actual Date of Completion : </h5><br>
+                        <h5 style="font-weight: 300;">-</h5>
+                    </div>
+                    
+                </div>
+                </div>
+
+                <div class="gallery">
+                    <a href="https://lh5.googleusercontent.com/A0Brv-KzlUZZ9Bo2SubW7_4SeREuhC_qmBkXYNjuhGe0_qeTqYMt7TtIO-XOl2Nn7MQ=w2400" data-lightbox="mygallery"><img src="https://lh5.googleusercontent.com/A0Brv-KzlUZZ9Bo2SubW7_4SeREuhC_qmBkXYNjuhGe0_qeTqYMt7TtIO-XOl2Nn7MQ=w2400"></a>
+                    <a href="https://lh6.googleusercontent.com/SWfMLECayhggjwKRN_pj9glQopqtX5hsIufjdM7jcBNo5JjigohQxOzaxXhpzXQw23A=w2400" data-lightbox="mygallery"><img src="https://lh6.googleusercontent.com/SWfMLECayhggjwKRN_pj9glQopqtX5hsIufjdM7jcBNo5JjigohQxOzaxXhpzXQw23A=w2400"></a>
+                    <a href="https://lh6.googleusercontent.com/a9IvkJVQP0v6jlVjzhVUHzLpS7aJDAl5FM6qIDUXl0N2rSUnKhhQP6jjuZDL3qVRGbk=w2400" data-lightbox="mygallery"><img src="https://lh6.googleusercontent.com/a9IvkJVQP0v6jlVjzhVUHzLpS7aJDAl5FM6qIDUXl0N2rSUnKhhQP6jjuZDL3qVRGbk=w2400"></a>
+                    <a href="https://lh6.googleusercontent.com/0M37F5OmRNX97xwvRwignWS17TPH-y_Xut-CAZxx-xS0th0x4ZvEkWH9QxRtkqvfHZE=w2400" data-lightbox="mygallery"><img src="https://lh6.googleusercontent.com/0M37F5OmRNX97xwvRwignWS17TPH-y_Xut-CAZxx-xS0th0x4ZvEkWH9QxRtkqvfHZE=w2400"></a>
+                    <a href="https://lh3.googleusercontent.com/baoKKRbkKELoDwM7wTzBNagCQXEqUxNs25T5znF_u_LVOYFZcJUkPNFayzv-5IzhU70=w2400" data-lightbox="mygallery"><img src="https://lh3.googleusercontent.com/baoKKRbkKELoDwM7wTzBNagCQXEqUxNs25T5znF_u_LVOYFZcJUkPNFayzv-5IzhU70=w2400"></a>
+                </div>
+
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
