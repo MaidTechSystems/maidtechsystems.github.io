@@ -63,12 +63,6 @@
                </div><br>
                <div class="form-group">
                  <input type="text" class="form-control" id="STI" placeholder="Pillar STI">
-               </div><br>
-               <div class="form-group">
-                 <input type="text" class="form-control" id="Lat" placeholder="Latitude">
-               </div><br>
-               <div class="form-group">
-                 <input type="text" class="form-control" id="Long" placeholder="Longitude">
                </div>
              </form>
              </div>
@@ -77,7 +71,7 @@
 
                 <div class="card projinputcard">
                     
-                    <!-- ==== Procurement Data Input Form ==== -->
+                    <!-- ==== Progress Data Input Form ==== -->
             <div class="col-md-6"><span style="font-weight: 600;">Progress Data</span>
                 <form>
                     <div class="form-group"><br>
@@ -96,8 +90,47 @@
               </div>
 
                 </div>
-    
-                </div>
+
+                <div class="card projinputcard">
+                    <!-- ==== Picture Data Input Form ==== -->
+            <div class="col-md-6"><span style="font-weight: 600;">Pictures Data</span>
+              <form>
+                  <div class="form-group"><br>
+                      <input type="text" class="form-control" id="Pic_1" placeholder="Picture 1">
+                    </div><br>
+                    <div class="form-group">
+                     <input type="text" class="form-control" id="Pic_2" placeholder="Picture 2">
+                   </div><br>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="Pic_3" placeholder="Picture 3">
+                    </div><br>
+                    <div class="form-group">
+                     <input type="text" class="form-control" id="Pic_4" placeholder="Picture 4">
+                   </div><br>
+                   <div class="form-group">
+                    <input type="text" class="form-control" id="Pic_5" placeholder="Picture 5">
+                  </div>
+            </form>
+            </div>
+            </div>
+
+            <div class="card projinputcard">
+                    <!-- ==== Location Data Input Form ==== -->
+                    <div class="col-md-6"><span style="font-weight: 600;">Location Data</span>
+                      <form>
+                        <div class="form-group"><br>
+                          <input type="text" class="form-control" id="Lat" placeholder="Latitude">
+                        </div><br>
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="Long" placeholder="Longitude">
+                        </div>
+                    </form>
+                    </div>
+                    </div>
+
+                      </div>
+
+              
                 <br><br>
             <button type="submit" id="submit" class="btn">Submit</button>
                 </div>
@@ -160,6 +193,12 @@
     var Status = document.getElementById('Status').value;
     var Progress = document.getElementById('Progress').value;
 
+    var Pic_1 = document.getElementById('Pic_1').value;
+    var Pic_2 = document.getElementById('Pic_2').value;
+    var Pic_3 = document.getElementById('Pic_3').value;
+    var Pic_4 = document.getElementById('Pic_4').value;
+    var Pic_5 = document.getElementById('Pic_5').value;
+
     if(Project_Name==""){
       alert('not saved, please enter a valid Project Name');
     }else{
@@ -178,6 +217,11 @@
     Completion_Date: Completion_Date,
     Status: Status,
     Progress: Progress,
+    Pic_1: Pic_1,
+    Pic_2: Pic_2,
+    Pic_3: Pic_3,
+    Pic_4: Pic_4,
+    Pic_5: Pic_5,
     
    });
    alert('saved');
