@@ -15,6 +15,14 @@
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <script>
+        var piddata2 = sessionStorage.getItem('piddata');
+    </script>
+
+<script>
+    var piddata2 = sessionStorage.getItem('piddata');
+</script>
+
 </head>
 
 <body>
@@ -50,25 +58,25 @@
                 <div style="margin-left: 50px;">
                     <label>First Name :</label>
                     &nbsp; &nbsp;
-                    <label>First Name</label>
+                    <label id="fname">First Name</label>
                 </div><br>
 
                 <div style="margin-left: 50px; margin-top: 10px;">
                     <label>Last Name :</label>
                     &nbsp; &nbsp;
-                    <label>Last Name</label>
+                    <label id="lname">Last Name</label>
                 </div><br>
 
                 <div style="margin-left: 50px;">
                     <label>&nbsp; &nbsp;&nbsp; &nbsp;Gender :</label>
                     &nbsp; &nbsp;
-                    <label>Gender</label>
+                    <label id="gender">Gender</label>
                 </div><br>
 
                 <div style="margin-left: 30px; margin-top: 10px;">
-                    <label>Marital Status :</label>
+                    <label>Age :</label>
                     &nbsp; &nbsp;
-                    <label>Marital Status</label>
+                    <label id="age">Age</label>
                 </div>
 
             </div><br><br>
@@ -83,19 +91,19 @@
                 <div style="margin-left: 50px;">
                     <label>Diagnosis :</label>
                     &nbsp; &nbsp;
-                    <label>Doctor's Diagnosis</label>
+                    <label id="diag">Doctor's Diagnosis</label>
                 </div><br>
 
                 <div style="margin-left: 50px; margin-top: 10px;">
                     <label>Additional <br> Investigations :</label>
                     &nbsp; &nbsp;
-                    <label>...</label>
+                    <label id="addInv">...</label>
                 </div><br><br>
 
                 <div style="margin-left: 50px;">
                     <label>Prescriptions :</label>
                     &nbsp; &nbsp;
-                    <label>Prescriptions</label>
+                    <label id="presc">Prescriptions</label>
                 </div>
 
             </div><br><br><br><br><br>
