@@ -22,54 +22,107 @@ toggle.onclick = function () {
 
 //Charts
   const ctx = document.getElementById('myChart');
-  //Chart.defaults.font.size = 14;
-  //ctx.height = 300;
 
   var data = {
-    labels: ["State Projects", "Partner Projects"],
+    labels: ["Component 1"],
     datasets: [
         {
             label: "Total",
+            backgroundColor: "#0095ffd5",
+            data: [320],
+            datalabels:{
+              anchor:'end',
+              align:'top',
+              offset:-7
+            }
+        },
+        {
+            label: "MMC",
             backgroundColor:"#0095ffd5",
-            data: [50,100]
+            data: [100],
+            datalabels:{
+              anchor:'end',
+              align:'top',
+              offset:-7
+            }
         },
         {
-            label: "Ongoing",
-            backgroundColor:"orange",
-            data: [35,85]
+            label: "Jere",
+            backgroundColor:"#0095ffd5",
+            data: [24],
+            datalabels:{
+              anchor:'end',
+              align:'top',
+              offset:-7
+            }
         },
         {
-            label: "Completed",
-            backgroundColor:"#02d34b",
-            data: [25,65]
+          label: "Konduga",
+          backgroundColor:"#0095ffd5",
+          data: [5],
+          datalabels:{
+            anchor:'end',
+            align:'top',
+            offset:-7
+          }
+      },
+      {
+        label: "Mafa",
+        backgroundColor:"#0095ffd5",
+        data: [3],
+        datalabels:{
+          anchor:'end',
+          align:'top',
+          offset:-7
         }
-    ]
+    },
+      {
+        label: "Bama",
+        backgroundColor:"#0095ffd5",
+        data: [14],
+        datalabels:{
+          anchor:'end',
+          align:'top',
+          offset:-7
+        }
+    },
+    {
+      label: "Gwoza",
+      backgroundColor:"#0095ffd5",
+      data: [10],
+      datalabels:{
+        anchor:'end',
+        align:'top',
+        offset:-7
+      }
+  },
+  {
+    label: "Biu",
+    backgroundColor:"#0095ffd5",
+    data: [14],
+    datalabels:{
+      anchor:'end',
+      align:'top',
+      offset:-7
+    }
+},
+      ]
 };
 
 var myBarChart = new Chart(ctx, {
     type: 'bar',
     data: data,
+    plugins: [ChartDataLabels],
     options: {
-      plugins: {
-        legend: {
-            display: false
-        },
-    },
       //indexAxis: 'y',
         barValueSpacing: 20,
         scales: {
           x: {
-            ticks:{
-              color: 'black'
-            },
             grid: {
               display: false
             }
           },
           y: {
-            ticks:{
-              color: 'black'
-            },
             grid: {
               display: false
             }
@@ -79,106 +132,182 @@ var myBarChart = new Chart(ctx, {
 });
 
 
-  const ctx2 = document.getElementById('myChart2');
+const ctxline = document.getElementById('myLineChart');
 
-  new Chart(ctx2, {
-    type: 'bar',
-    data: {
-      labels: ['Total', 'State', 'Partners'],
-      datasets: [{
-        label: 'Component Two',
-        data: [12, 19, 3],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
+var data = {
+  labels: ["January", "February", "March", "April", "May", "June", "July"],
+  datasets: [
+      {
+          label: "Admissions",
+          backgroundColor: "#2195f386",
+          fill: true,
+          data: [1000,850,900,750,600,1100,800],
+          datalabels:{
+            anchor:'end',
+            align:'top',
+            offset:-7
+          },
+          tension: 0.0
       }
-    }
-  });
-
-  const ctx3 = document.getElementById('myChart3');
-  new Chart(ctx3, {
-    type: 'doughnut',
-    data: {
-      labels: ['Finance', 'MRRR', 'Works', 'Health', 'Education', 'Science & Tech', 'Agriculture'],
-      datasets: [{
-        label: 'Budget',
-        data: [50,100,30,85,25,70,15],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-
-  const ctx4 = document.getElementById('myChart4');
-  //Chart.defaults.font.size = 14;
-  //ctx.height = 300;
-
-  var data = {
-    labels: ["Finance", "RRR", "Works", "Health", "Education", "Science & Tech", "Agriculture"],
-    datasets: [
-        {
-            label: "Budgeted",
-            
-            data: [50,100,30,85,25,70,15]
-        },
-        {
-            label: "Utilized",
-            
-            data: [35,85,20,50,10,60,5]
-        }
     ]
 };
 
-var myBarChart = new Chart(ctx4, {
-    type: 'bar',
-    data: data,
-    options: {
-      //indexAxis: 'y',
-        barValueSpacing: 20,
-        scales: {
-          x: {
-            ticks:{
-              color: 'black'
-            },
-            grid: {
-              display: false
-            }
+var myBarChart = new Chart(ctxline, {
+  type: 'line',
+  data: data,
+  plugins: [ChartDataLabels],
+  options: {
+    //indexAxis: 'y',
+      barValueSpacing: 20,
+      scales: {
+        x: {
+          grid: {
+            display: false
+          }
+        },
+        y: {
+          grid: {
+            display: false
           },
-          y: {
-            ticks:{
-              color: 'black'
-            },
-            grid: {
-              display: false
-            }
+          beginAtZero: true
+        }
+      }
+  }
+});
+
+const ctx2 = document.getElementById('myChart2');
+
+var data = {
+  labels: ["January", "February", "March"],
+  datasets: [
+      {
+          label: "Malaria",
+          backgroundColor: "#2196f3",
+          data: [100,150,90],
+          datalabels:{
+            anchor:'end',
+            align:'top',
+            offset:-7
+          }
+      },
+      {
+          label: "Diabetes",
+          backgroundColor:"#6CA0DC",
+          data: [20,15,8],
+          datalabels:{
+            anchor:'end',
+            align:'top',
+            offset:-7
+          }
+      },
+      {
+          label: "Typhiod",
+          backgroundColor:"#5D8AA8",
+          data: [40,55,20],
+          datalabels:{
+            anchor:'end',
+            align:'top',
+            offset:-7
+          }
+      },
+      {
+          label: "Heart Disease",
+          backgroundColor:"#BCD4E6",
+          data: [20,15,5],
+          datalabels:{
+            anchor:'end',
+            align:'top',
+            offset:-7
+          }
+      }
+    ]
+};
+
+var myBarChart = new Chart(ctx2, {
+  type: 'bar',
+  data: data,
+  plugins: [ChartDataLabels],
+  options: {
+    //indexAxis: 'y',
+      barValueSpacing: 20,
+      scales: {
+        x: {
+          grid: {
+            display: false
+          }
+        },
+        y: {
+          grid: {
+            display: false
           }
         }
-    }
+      }
+  }
 });
 
 
-const ctx5 = document.getElementById('myChart5');
-  new Chart(ctx5, {
-    type: 'doughnut',
+const ctxdb = document.getElementById('myChart4');
+
+var data = {
+  labels: ["January", "February", "March"],
+  datasets: [
+      {
+          label: "Births",
+          backgroundColor: "#2196f3",
+          data: [50,38,60],
+          datalabels:{
+            anchor:'end',
+            align:'top',
+            offset:-7
+          }
+      },
+      {
+          label: "Deaths",
+          backgroundColor:"#BCD4E6",
+          data: [20,15,10],
+          datalabels:{
+            anchor:'end',
+            align:'top',
+            offset:-7
+          }
+      }
+    ]
+};
+
+var myBarChart = new Chart(ctxdb, {
+  type: 'bar',
+  data: data,
+  plugins: [ChartDataLabels],
+  options: {
+    //indexAxis: 'y',
+      barValueSpacing: 20,
+      scales: {
+        x: {
+          grid: {
+            display: false
+          }
+        },
+        y: {
+          grid: {
+            display: false
+          }
+        }
+      }
+  }
+});
+
+
+  const ctx3 = document.getElementById('myChart3');
+  new Chart(ctx3, {
+    type: 'pie',
     data: {
-      labels: ['Finance', 'MRRR', 'Works', 'Health', 'Education', 'Science & Tech', 'Agriculture'],
+      labels: ['Male', 'Female'],
       datasets: [{
-        label: 'Budget',
-        data: [50,100,30,85,25,70,15],
+        data: [150, 200],
         borderWidth: 1
       }]
     },
+    //plugins: [ChartDataLabels],
     options: {
       scales: {
         y: {
@@ -189,130 +318,59 @@ const ctx5 = document.getElementById('myChart5');
   });
 
 
-  //Circular Progress Bars
+  //Circular Progress Bar
 let progressBar = document.querySelector(".circular-progress");
 let valueContainer = document.querySelector(".value-container");
 
 let progressValue = 0;
-let progressEndValue = 35;
+let progressEndValue = 67;
 let speed = 50;
 
 let progress = setInterval(() => {
   progressValue++;
   valueContainer.textContent = `${progressValue}%`;
   progressBar.style.background = `conic-gradient(
-      #00ff59 ${progressValue * 3.6}deg,
-      #596d6060 ${progressValue * 3.6}deg
+      #4d5bf9 ${progressValue * 3.6}deg,
+      #cadcff ${progressValue * 3.6}deg
   )`;
   if (progressValue == progressEndValue) {
     clearInterval(progress);
   }
 }, speed);
 
-let progressBar1 = document.querySelector(".circular-progress1");
-let valueContainer1 = document.querySelector(".value-container1");
 
-let progressValue1 = 0;
-let progressEndValue1 = 35;
-let speed1 = 50;
-
-let progress1 = setInterval(() => {
-  progressValue1++;
-  valueContainer1.textContent = `${progressValue1}%`;
-  progressBar1.style.background = `conic-gradient(
-      #00ff59 ${progressValue1 * 3.6}deg,
-      #596d6060 ${progressValue1 * 3.6}deg
-  )`;
-  if (progressValue1 == progressEndValue1) {
-    clearInterval(progress1);
+  function getIndex(x)
+  {
+    document.getElementById('index').textContent = x.rowIndex;
   }
-}, speed1);
 
-let progressBar2 = document.querySelector(".circular-progress2");
-let valueContainer2 = document.querySelector(".value-container2");
-
-let progressValue2 = 0;
-let progressEndValue2 = 35;
-let speed2 = 50;
-
-let progress2 = setInterval(() => {
-  progressValue2++;
-  valueContainer2.textContent = `${progressValue2}%`;
-  progressBar2.style.background = `conic-gradient(
-      #00ff59 ${progressValue2 * 3.6}deg,
-      #596d6060 ${progressValue2 * 3.6}deg
-  )`;
-  if (progressValue2 == progressEndValue2) {
-    clearInterval(progress2);
+  function pDataPage()
+  {
+    var piddata = document.getElementById('piddata').value;
+    sessionStorage.setItem('piddata', piddata); 
+    console.log(sessionStorage);
+    window.location.href = 'dd2.html';
   }
-}, speed2);
 
-let progressBar3 = document.querySelector(".circular-progress3");
-let valueContainer3 = document.querySelector(".value-container3");
 
-let progressValue3 = 0;
-let progressEndValue3 = 35;
-let speed3 = 50;
-
-let progress3 = setInterval(() => {
-  progressValue3++;
-  valueContainer3.textContent = `${progressValue3}%`;
-  progressBar3.style.background = `conic-gradient(
-      #00ff59 ${progressValue3 * 3.6}deg,
-      #596d6060 ${progressValue3 * 3.6}deg
-  )`;
-  if (progressValue3 == progressEndValue3) {
-    clearInterval(progress3);
+  function pDataPage2()
+  {
+    var fname = document.getElementById('fname2').innerHTML;
+    sessionStorage.setItem('fname', fname); 
+    var lname = document.getElementById('lname2').innerHTML;
+    sessionStorage.setItem('lname', lname); 
+    var gender = document.getElementById('gender2').innerHTML;
+    sessionStorage.setItem('gender', gender); 
+    var age = document.getElementById('age2').innerHTML;
+    sessionStorage.setItem('age', age); 
+    console.log(sessionStorage);
+    window.location.href = 'dd22.html';
   }
-}, speed3);
 
-let progressBar4 = document.querySelector(".circular-progress4");
-let valueContainer4 = document.querySelector(".value-container4");
-
-let progressValue4 = 0;
-let progressEndValue4 = 100;
-let speed4 = 50;
-
-let progress4 = setInterval(() => {
-  progressValue4++;
-  valueContainer4.textContent = `${progressValue4}%`;
-  progressBar4.style.background = `conic-gradient(
-      #00ff59 ${progressValue4 * 3.6}deg,
-      #596d6060 ${progressValue4 * 3.6}deg
-  )`;
-  if (progressValue4 == progressEndValue4) {
-    clearInterval(progress4);
+  function pDataPage3()
+  {
+    var piddata = document.getElementById('piddata').value;
+    sessionStorage.setItem('piddata', piddata); 
+    console.log(sessionStorage);
+    window.location.href = 'fp6.html';
   }
-}, speed4);
-
-//Responsive Fonts
-function responsiveFonts(){
-  if (window.outerWidth > 1700){
-    Chart.defaults.font.size = 25;
-  }
-};
-
-
-//Google Charts
-google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
-
-        var options = {
-          title: 'My Daily Activities'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-      }
