@@ -315,6 +315,7 @@ var Phone = document.getElementById('Phone').value;
     var i2 = document.getElementById('i2').value;
     var i3 = document.getElementById('i3').value;
     var i4 = document.getElementById('i4').value;
+    
 
 if(pid==""){
   alert('Not saved! Please enter a valid Patient ID');
@@ -348,7 +349,7 @@ Phone: Phone,
 
 });
 alert('Success!');
-document.forms['pdform'].reset();
+window.location.href = 'fp2.html';
 }
 
 });
