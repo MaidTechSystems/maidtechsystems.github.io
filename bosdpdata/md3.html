@@ -42,6 +42,7 @@
             <div style="text-align: center; margin-top: 20px;">
                 <h3>Patients</h3>
             </div><br>
+            <br>
 
             <div class="tablediv" style="height:750px;overflow:auto;">
 
@@ -52,22 +53,25 @@
 				<th>S/N</th>
                 <th>PID</th>
 				<th>Name</th>
-				<th>Facility</th>
+				<th>Last Name</th>
 			</tr>
 		        </thead>
 
                 <tbody>
 
-                <tr>
+                <tr onclick="getIndex(this)">
                     <td>S/N</td>
                     <td>PID</td>
-				    <td>Name</td>
-				    <td>Facility</td>
+				    <td>First Name</td>
+				    <td>Last Name</td>
+                    <td>More</td>
                 </tr>
 
                 </tbody>
 
             </table>
+
+            <!--<p>Row Index: <span id="index"></span></p>-->
                
             </div>
             
@@ -83,3 +87,61 @@
 </body>
 
 </html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getDatabase, set, ref ,push, child, onValue} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+  apiKey: "AIzaSyDHW5B-C3TsaPrPdNLzBrpH0Tn9lJ7BnBQ",
+  authDomain: "mamima-592ad.firebaseapp.com",
+  databaseURL: "https://mamima-592ad-default-rtdb.firebaseio.com",
+  projectId: "mamima-592ad",
+  storageBucket: "mamima-592ad.appspot.com",
+  messagingSenderId: "449871818857",
+  appId: "1:449871818857:web:ff46199fde3401f119f2f8",
+  measurementId: "G-RQV5ZRMZYB"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  
+  // Get a reference to the database service
+  const database = getDatabase(app);
+
+  // read data
+  //getData.addEventListener('click',(e) => {
+
+    $('#dataTbl td').remove();
+    var rowNum = 0; 
+    const dbRef = ref(database, 'Mamima_Patients/');
+    
+    onValue(dbRef, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+      const childKey = childSnapshot.key;
+      const childData = childSnapshot.val();
+      
+      rowNum += 1; 
+      const rowNum2 = onclick="getIndex(this)";
+      
+  var row = "<tr><td>" + rowNum + "</td><td>" + childData.pid + "</td><td>" + childData.FirstName + "</td><td>" + childData.LastName + "</td></tr>"
+
+  $(row).appendTo('#dataTbl');
+      
+      });
+    }, {
+       onlyOnce: true
+    });
+
+  //});
+
+
+</script>
