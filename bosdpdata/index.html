@@ -40,18 +40,18 @@
                 <div class="header">
                     <br><h1>LOGIN</h1>
                 </div><br><br>
-            <form>
-                <span>
-                    <input type="text" placeholder="Username" name="">
-                </span><br>
-                <span>
-                    <input type="password" placeholder="Password" name="">
-                </span><br>
-                    <button><a href="fp1.html">login</a></button>
-                    
-                    <button style="width: 30%;"><a href="dd1.html">Doctor</a></button>
-                    <button style="width: 30%;"><a href="md1.html">Management</a></button>
-            </form>
+                <form id="form_id" method="post" name="myform">
+                    <span>
+                        <i class="fa fa-user"></i>
+                        <input type="text" placeholder="username" name="username" id="username">
+                    </span><br>
+                    <span>
+                        <i class="fa fa-lock"></i>
+                        <input type="password" placeholder="password" name="password" id="password">
+                    </span><br>
+                        <input style="background-color: #0C8311;" type="button" value="Login" id="submit" onclick="validate()"/>
+       
+                </form>
             </div>
 
             <div>
@@ -68,6 +68,38 @@
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        
+        function validate(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        
+        if ( username == "focal" && password == "1234"){
+        alert ("Login successful!");
+        window.location = "fp1.html"; 
+        return false;
+        }
+        
+        else if ( username == "doctor" && password == "1234"){
+        alert ("Login successful!");
+        window.location = "dd1.html"; 
+        return false;
+        }
+    
+        else if ( username == "manage" && password == "1234"){
+        alert ("Login successful!");
+        window.location = "md1.html"; 
+        return false;
+        }
+    
+        else{
+        alert("Wrong Username/Password!");
+            }
+        
+        }
+    
+        </script>
 </body>
 
 </html>
