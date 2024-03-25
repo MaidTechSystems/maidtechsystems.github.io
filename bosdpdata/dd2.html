@@ -15,6 +15,10 @@
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <script>
+        var piddata2 = sessionStorage.getItem('piddata');
+    </script>
+
 </head>
 
 <body>
@@ -50,31 +54,31 @@
                 <div style="margin-left: 50px;">
                     <label>First Name :</label>
                     &nbsp; &nbsp;
-                    <label>First Name</label>
+                    <label id="fname2">First Name</label>
                 </div><br>
 
                 <div style="margin-left: 50px; margin-top: 10px;">
                     <label>Last Name :</label>
                     &nbsp; &nbsp;
-                    <label>Last Name</label>
+                    <label id="lname2">Last Name</label>
                 </div><br>
 
                 <div style="margin-left: 50px;">
                     <label>&nbsp; &nbsp;&nbsp; &nbsp;Gender :</label>
                     &nbsp; &nbsp;
-                    <label>Gender</label>
+                    <label id="gender2">Gender</label>
                 </div><br>
 
                 <div style="margin-left: 30px; margin-top: 10px;">
                     <label>Marital Status :</label>
                     &nbsp; &nbsp;
-                    <label>Marital Status</label>
+                    <label id="mstatus2">Marital Status</label>
                 </div><br>
 
                 <div style="margin-left: 30px; margin-top: 10px;">
                     <label>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Age :</label>
                     &nbsp; &nbsp;
-                    <label>Age</label>
+                    <label id="age2">Age</label>
                 </div>
 
             </div><br><br>
@@ -89,27 +93,27 @@
 
                 <br>
                         <label style="margin-left: 10px;">1:</label>&nbsp; &nbsp;
-                        <label style="margin-left: 10px;"></label>
+                        <label id="c12" style="margin-left: 10px;"></label>
     
                         <br><br>
                         <label style="margin-left: 10px;">2:</label>&nbsp; &nbsp;
-                        <label style="margin-left: 10px;"></label>
+                        <label id="c22" style="margin-left: 10px;"></label>
     
                         <br><br>
                         <label style="margin-left: 10px;">3:</label>&nbsp; &nbsp;
-                        <label style="margin-left: 10px;"></label>
+                        <label id="c32" style="margin-left: 10px;"></label>
     
                         <br><br>
                         <label style="margin-left: 10px;">4:</label>&nbsp; &nbsp;
-                        <label style="margin-left: 10px;"></label>
+                        <label id="c42" style="margin-left: 10px;"></label>
     
                         <br><br>
                         <label style="margin-left: 10px;">5:</label>&nbsp; &nbsp;
-                        <label style="margin-left: 10px;"></label>
+                        <label id="c52" style="margin-left: 10px;"></label>
 
                         <br><br>
                         <label style="margin-left: 10px;">Symptoms Duration :</label>&nbsp; &nbsp;
-                        <label style="margin-left: 10px;"></label>
+                        <label id="sd2" style="margin-left: 10px;"></label>
 
             </div><br><br>
 
@@ -121,19 +125,19 @@
                 <div style="margin-left: 10px;">
                     <label>Body Temperature :</label>
                     &nbsp; &nbsp;
-                    <label>BT</label>
+                    <label id="bt2">BT</label>
                 </div><br>
 
                 <div style="margin-left: 10px; margin-top: 10px;">
                     <label>Heart Rate :</label>
                     &nbsp; &nbsp;
-                    <label>HR</label>
+                    <label id="hr2">HR</label>
                 </div><br>
                 
                 <div style="margin-left: 10px; margin-top: 10px;">
                     <label>Blood Pressure :</label>
                     &nbsp; &nbsp;
-                    <label>BP</label>
+                    <label id="bp2">BP</label>
                 </div><br>
             
         </div>
@@ -148,31 +152,31 @@
                 <div style="margin-left: 10px;">
                     <label>Have You Undergone <br>Past Surgeries ?</label>
                     &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
-                    <label>Y/N</label>
+                    <label id="q12">Y/N</label>
                 </div><br>
 
                 <div style="margin-left: 10px; margin-top: 10px;">
                     <label>If Yes, What Type? :</label>
                     &nbsp; &nbsp;
-                    <label></label>
+                    <label id="q22"></label>
                 </div><br>
                 
                 <div style="margin-left: 10px; margin-top: 10px;">
                     <label>Are You Currently <br>Taking Any Medications ?</label>
                     &nbsp; &nbsp;
-                    <label>Y/N</label>
+                    <label id="q32">Y/N</label>
                 </div><br>
                 
                 <div style="margin-left: 10px; margin-top: 10px;">
                     <label>If Yes, What Medications ?</label>
                     &nbsp; &nbsp;
-                    <label></label>
+                    <label id="q42"></label>
                 </div><br>
                 
                 <div style="margin-left: 10px; margin-top: 10px;">
                     <label>Family Medical History ?</label>
                     &nbsp; &nbsp;
-                    <label></label>
+                    <label id="q52"></label>
                 </div><br>
 
                 <br><br>
@@ -181,49 +185,25 @@
             <br>
 
             <label style="margin-left: 10px;">1:</label>&nbsp; &nbsp;
-                        <label style="margin-left: 10px;"></label>
+                        <label id="i12" style="margin-left: 10px;"></label>
     
                         <br><br>
                         <label style="margin-left: 10px;">2:</label>&nbsp; &nbsp;
-                        <label style="margin-left: 10px;"></label>
+                        <label id="i22" style="margin-left: 10px;"></label>
     
                         <br><br>
                         <label style="margin-left: 10px;">3:</label>&nbsp; &nbsp;
-                        <label style="margin-left: 10px;"></label>
+                        <label id="i32" style="margin-left: 10px;"></label>
     
                         <br><br>
                         <label style="margin-left: 10px;">4:</label>&nbsp; &nbsp;
-                        <label style="margin-left: 10px;"></label>
+                        <label id="i42" style="margin-left: 10px;"></label>
                         <br><br><br>
 
-                        <hr>
-                        <br>
-
-            <h4 style="text-align: center; font-weight: 700;">Doctor's Input</h4>
-            <br>
-
-            <div style="text-align: center;">
-
-            <div>
-                <label>Diagnosis :</label><br>
-                <textarea style="width: 250px; height: 125px; resize: none;"></textarea>
-            </div><br>
-
-            <div>
-                <label>Additional Investigations :</label><br>
-                <textarea style="width: 250px; height: 125px; resize: none;"></textarea>
-            </div><br>
-
-            <div>
-                <label>Prescriptions :</label><br>
-                <textarea style="width: 250px; height: 125px; resize: none;"></textarea>
-            </div><br>
-
-            </div><br><br>
 
             <div style="text-align: center;">
     
-                <a href="dd1.html"><button class="bt" style="color: white;">Submit</button></a>
+                <button onclick="pDataPage2()" class="bt2" style="width: 25%;">Next</button>
 
             </div>
 
@@ -238,3 +218,79 @@
 </body>
 
 </html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getDatabase, set, ref ,push, child, onValue} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const config = {
+  apiKey: "AIzaSyDHW5B-C3TsaPrPdNLzBrpH0Tn9lJ7BnBQ",
+  authDomain: "mamima-592ad.firebaseapp.com",
+  databaseURL: "https://mamima-592ad-default-rtdb.firebaseio.com",
+  projectId: "mamima-592ad",
+  storageBucket: "mamima-592ad.appspot.com",
+  messagingSenderId: "449871818857",
+  appId: "1:449871818857:web:ff46199fde3401f119f2f8",
+  measurementId: "G-RQV5ZRMZYB"
+  };
+
+  firebase.initializeApp(config);
+
+// Get a reference to the database service
+var database = firebase.database();
+
+// Define the ID to retrieve data for
+var idToRetrieve = piddata2;
+
+// Get a reference to the data you want to retrieve
+var dataRef = firebase.database().ref('Mamima_Patients/' + idToRetrieve);
+
+// Create an object to store the retrieved data
+var retrievedData = {};
+
+// Retrieve the data
+dataRef.once('value').then(function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+    var key = childSnapshot.key;
+    var childData = childSnapshot.val();
+    retrievedData[key] = childData;
+    
+});
+
+   // Display the retrieved data on the HTML page
+   document.getElementById("fname2").innerHTML = retrievedData["FirstName"];
+   document.getElementById("lname2").innerHTML = retrievedData["LastName"];
+   document.getElementById("gender2").innerHTML = retrievedData["Age"];
+   document.getElementById("mstatus2").innerHTML = retrievedData["MaritalStatus"];
+   document.getElementById("c12").innerHTML = retrievedData["C1"];
+   document.getElementById("c22").innerHTML = retrievedData["C2"];
+   document.getElementById("c32").innerHTML = retrievedData["C3"];
+   document.getElementById("c42").innerHTML = retrievedData["C4"];
+   document.getElementById("c52").innerHTML = retrievedData["C5"];
+   document.getElementById("sd2").innerHTML = retrievedData["SD"];
+   document.getElementById("bt2").innerHTML = retrievedData["BT"];
+   document.getElementById("hr2").innerHTML = retrievedData["HR"];
+   document.getElementById("bp2").innerHTML = retrievedData["BP"];
+   document.getElementById("q12").innerHTML = retrievedData["Q1"];
+   document.getElementById("q22").innerHTML = retrievedData["Q2"];
+   document.getElementById("q32").innerHTML = retrievedData["Q3"];
+   document.getElementById("q42").innerHTML = retrievedData["Q4"];
+   document.getElementById("q52").innerHTML = retrievedData["Q5"];
+   document.getElementById("i12").innerHTML = retrievedData["I1"];
+   document.getElementById("i22").innerHTML = retrievedData["I2"];
+   document.getElementById("i32").innerHTML = retrievedData["I3"];
+   document.getElementById("i42").innerHTML = retrievedData["I4"];
+
+});
+    
+</script>
