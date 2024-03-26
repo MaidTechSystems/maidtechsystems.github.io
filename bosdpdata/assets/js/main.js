@@ -12,9 +12,19 @@
     window.location.href = 'dd2.html';
   }
 
+  function pDataPageFP()
+  {
+    var piddata = document.getElementById('piddata').value;
+    sessionStorage.setItem('piddata', piddata); 
+    console.log(sessionStorage);
+    window.location.href = 'fp6.html';
+  }
+
 
   function pDataPage2()
   {
+    var pid2 = document.getElementById('pid2').innerHTML;
+    sessionStorage.setItem('pid2', pid2); 
     var fname = document.getElementById('fname2').innerHTML;
     sessionStorage.setItem('fname', fname); 
     var lname = document.getElementById('lname2').innerHTML;
