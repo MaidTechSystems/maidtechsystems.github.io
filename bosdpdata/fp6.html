@@ -14,14 +14,10 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script>
+   
+   <script>
         var piddata2 = sessionStorage.getItem('piddata');
     </script>
-
-<script>
-    var piddata2 = sessionStorage.getItem('piddata');
-</script>
 
 </head>
 
@@ -55,6 +51,12 @@
 
             <div>
 
+                <div style="margin-left: 50px;">
+                    <label>PID :</label>
+                    &nbsp; &nbsp;
+                    <label id="pid">PID</label>
+                </div><br>
+                
                 <div style="margin-left: 50px;">
                     <label>First Name :</label>
                     &nbsp; &nbsp;
@@ -126,3 +128,64 @@
 </body>
 
 </html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getDatabase, set, ref ,push, child, onValue} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const config = {
+  apiKey: "AIzaSyDHW5B-C3TsaPrPdNLzBrpH0Tn9lJ7BnBQ",
+  authDomain: "mamima-592ad.firebaseapp.com",
+  databaseURL: "https://mamima-592ad-default-rtdb.firebaseio.com",
+  projectId: "mamima-592ad",
+  storageBucket: "mamima-592ad.appspot.com",
+  messagingSenderId: "449871818857",
+  appId: "1:449871818857:web:ff46199fde3401f119f2f8",
+  measurementId: "G-RQV5ZRMZYB"
+  };
+
+  firebase.initializeApp(config);
+
+// Get a reference to the database service
+var database = firebase.database();
+
+// Define the ID to retrieve data for
+var idToRetrieve = piddata2;
+
+// Get a reference to the data you want to retrieve
+var dataRef = firebase.database().ref('Mamima_Consutations/' + idToRetrieve);
+
+// Create an object to store the retrieved data
+var retrievedData = {};
+
+// Retrieve the data
+dataRef.once('value').then(function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+    var key = childSnapshot.key;
+    var childData = childSnapshot.val();
+    retrievedData[key] = childData;
+    
+});
+
+   // Display the retrieved data on the HTML page
+   document.getElementById("pid").innerHTML = piddata2;
+   document.getElementById("fname").innerHTML = retrievedData["FName"];
+   document.getElementById("lname").innerHTML = retrievedData["LName"];
+   document.getElementById("gender").innerHTML = retrievedData["Gender"];
+   document.getElementById("age").innerHTML = retrievedData["Age"];
+   document.getElementById("diag").innerHTML = retrievedData["Diagnosis"];
+   document.getElementById("addInv").innerHTML = retrievedData["AddInv"];
+   document.getElementById("presc").innerHTML = retrievedData["Presc"];
+});
+    
+</script>
