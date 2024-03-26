@@ -32,9 +32,9 @@
                         <h4 style="margin-right: 175px; color: #0C8311; font-size: 0.85rem;">MAMIMA e-HealthCare System</h4>
                     </div>
 
-                <div>
-                    <a href="index.html"><ion-icon name="log-out-outline"></ion-icon></a>
-                </div>
+                    <div>
+                        <a href="index.html"><ion-icon name="log-out-outline"></ion-icon></a>
+                    </div>
             </div>
 
             <!-- ======================= Page ================== -->
@@ -132,9 +132,9 @@
       const childData = childSnapshot.val();
       
       rowNum += 1; 
-      const rowNum2 = onclick="getIndex(this)";
+      //const rowNum2 = onclick="getIndex(this)";
       
-  var row = "<tr><td>" + rowNum + "</td><td>" + childData.pid + "</td><td>" + childData.FirstName + "</td><td>" + childData.LastName + "</td></tr>"
+  var row = "<tr><td>" + rowNum + "</td><td>" + childKey + "</td><td>" + childData.FirstName + "</td><td>" + childData.LastName + "</td></tr>"
 
   $(row).appendTo('#dataTbl');
       
