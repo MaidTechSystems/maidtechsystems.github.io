@@ -48,11 +48,6 @@
             <!-- ==== Project Data Input Form ==== -->
             <div class="col-md-6">
                 <form>
-                    <div style="margin-left: 105px;">
-                        <label>PID :</label>
-                        &nbsp; &nbsp;
-                        <input id="PID" style="height: 35px; width: 250px; border-radius: 2.5px; font-size: medium; border-radius: 5px">
-                    </div><br>
                     
                     <div style="margin-left: 50px;">
                         <label>First Name :</label>
@@ -138,7 +133,7 @@
                     <div style="margin-left: 50px; margin-top: 10px;">
                         <label>Symptoms <br> Duration :</label>
                         &nbsp; &nbsp;
-                        <input id="sd" type="text" style="height: 35px; width: 100px; border-radius: 2.5px; font-size: medium; border-radius: 5px;">
+                        <input id="sd" type="number" style="height: 35px; width: 100px; border-radius: 2.5px; font-size: medium; border-radius: 5px;">
                         &nbsp;&nbsp;<label>Days/Weeks/Months</label>
                     </div><br><br>
 
@@ -161,7 +156,7 @@
                     <div style="margin-left: 75px; margin-top: 10px;">
                         <label>Blood Pressure :</label>
                         &nbsp; &nbsp;
-                        <input id="bp" type="text" style="height: 35px; width: 100px; border-radius: 2.5px; font-size: medium; border-radius: 5px;">
+                        <input id="bp" type="number" style="height: 35px; width: 100px; border-radius: 2.5px; font-size: medium; border-radius: 5px;">
                     </div><br><br>
 
                     <div style="text-align: center; margin-top: 20px;">
@@ -287,10 +282,14 @@
   // Get a reference to the database service
   const database = getDatabase(app);
 
+  //PID Generator
+  
+
   // write data
   submit.addEventListener('click',(e) => {
 
-var pid = document.getElementById('PID').value; 
+var randomnumber = Math.floor(Math.random() * (9999 - 1001 + 1)) + 1;
+var pid = randomnumber;
 var FirstName = document.getElementById('FirstName').value;  
 var LastName = document.getElementById('LastName').value;  
 var Age = document.getElementById('Age').value;
@@ -317,9 +316,6 @@ var Phone = document.getElementById('Phone').value;
     var i4 = document.getElementById('i4').value;
     
 
-if(pid==""){
-  alert('Not saved! Please enter a valid Patient ID');
-}else{
   set(ref(database, 'Mamima_Patients/' + pid), {
 
 FirstName: FirstName,
@@ -348,13 +344,10 @@ Phone: Phone,
     I4: i4
 
 });
-alert('Shamsu Mari Says Submitted Successfully! ;D');
 
 setTimeout(() => {
     window.location.href = 'fp2.html';
 }, 1000);
-
-}
 
 });
 </script>
