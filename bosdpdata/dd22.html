@@ -16,7 +16,11 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
+        var pid2 = sessionStorage.getItem('pid2');
         var fname = sessionStorage.getItem('fname');
+        var lname = sessionStorage.getItem('lname');
+        var gender = sessionStorage.getItem('gender');
+        var age = sessionStorage.getItem('age');
     </script>
 
 </head>
@@ -129,22 +133,29 @@
   // write data
   submit.addEventListener('click',(e) => {
 
-var pid = fname;
+var pid = pid2;
+var FName = fname;
+var LName = lname;
+var Age = age;
+var Gender = gender;
 var Diagnosis = document.getElementById('Diagnosis').value; 
 var AddInv = document.getElementById('AddInv').value;  
 var Presc = document.getElementById('Presc').value; 
 
-if(pid==""){
-  alert('Not saved! Please enter a valid Patient ID');
+if(Diagnosis=="" || Presc==""){
+  alert('Not saved! Please enter a Diagnosis & Prescription');
 }else{
   set(ref(database, 'Mamima_Consutations/' + pid), {
-
+    
+FName, FName,
+LName, LName,
+Age, Age,    
+Gender, Gender,
 Diagnosis: Diagnosis,
 AddInv: AddInv,
 Presc : Presc
 
 });
-alert('Shamsu Mari Says Submitted Successfully! ;D');
 
 setTimeout(() => {
     window.location.href = 'dd1.html';
