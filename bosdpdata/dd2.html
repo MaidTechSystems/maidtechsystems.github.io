@@ -50,6 +50,11 @@
             <br>
 
             <div>
+                <div style="margin-left: 100px;">
+                    <label>PID :</label>
+                    &nbsp; &nbsp;
+                    <label id="pid2">PID</label>
+                </div><br>
 
                 <div style="margin-left: 50px;">
                     <label>First Name :</label>
@@ -66,7 +71,7 @@
                 <div style="margin-left: 50px;">
                     <label>&nbsp; &nbsp;&nbsp; &nbsp;Gender :</label>
                     &nbsp; &nbsp;
-                    <label id="age2">Gender</label>
+                    <label id="gender2">Gender</label>
                 </div><br>
 
                 <div style="margin-left: 30px; margin-top: 10px;">
@@ -78,7 +83,7 @@
                 <div style="margin-left: 30px; margin-top: 10px;">
                     <label>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Age :</label>
                     &nbsp; &nbsp;
-                    <label id="gender2">Age</label>
+                    <label id="age2">Age</label>
                 </div>
 
             </div><br><br>
@@ -268,6 +273,7 @@ dataRef.once('value').then(function(snapshot) {
 });
 
    // Display the retrieved data on the HTML page
+   document.getElementById("pid2").innerHTML = piddata2;
    document.getElementById("fname2").innerHTML = retrievedData["FirstName"];
    document.getElementById("lname2").innerHTML = retrievedData["LastName"];
    document.getElementById("gender2").innerHTML = retrievedData["Age"];
