@@ -52,8 +52,9 @@
 			<tr>
 				<th>S/N</th>
                 <th>PID</th>
-				<th>Diagnosis</th>
-				<th>Prescription</a></th>
+				<th>First Name</th>
+				<th>Last Name</a></th>
+                <th><a href="fppid.html">Next</a></th></a>
 			</tr>
 		        </thead>
 
@@ -126,9 +127,9 @@
       const childData = childSnapshot.val();
       
       rowNum += 1; 
-      const rowNum2 = onclick="getIndex(this)";
+      //const rowNum2 = onclick="getIndex(this)";
       
-  var row = "<tr " + rowNum2 + "><td>" + rowNum + "</td><td>" + childData.pid + "</td><td>" + childData.Diagnosis + "</td> <td>" + childData.Presc + "</td></tr>"
+  var row = "<tr><td>" + rowNum + "</td><td>" + childKey + "</td><td>" + childData.FName + "</td> <td>" + childData.LName + "</td></tr>"
 
   $(row).appendTo('#dataTbl');
       
