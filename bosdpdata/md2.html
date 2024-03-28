@@ -41,49 +41,28 @@
 
             <div style="text-align: center; margin-top: 20px;">
                 <h3>PHCs</h3>
-            </div><br>
-
-            <div class="tablediv" style="height:750px;overflow:auto;">
-
-                <table class="table" id='dataTbl'>
+            </div>
             
-                <thead>
-			<tr>
-				<th>S/N</th>
-                <th>Name</th>
-				<th>LGA</th>
-				<th>Community</th>
-			</tr>
-		        </thead>
+            <!-- ======================= Page ================== -->
 
-                <tbody>
-
-                <tr>
-                    <td>1</td>
-                    <td>PHC Rann</td>
-				    <td>Kalabalge</td>
-				    <td>Rann</td>
-                </tr>
-
-                <tr>
-                    <td>2</td>
-                    <td>Gula PHC Shaffa</td>
-				    <td>Hawul</td>
-				    <td>Gula</td>
-                </tr>
-
-                <tr>
-                    <td>3</td>
-                    <td>Konduga PHC</td>
-				    <td>Konduga</td>
-				    <td>Konduga</td>
-                </tr>
-
-
-                </tbody>
-
-            </table>
-               
+            <div style="text-align: center; margin-top: 20px;"><br>
+                <h4 style="text-align: center; font-weight: 400;">Select PHC :</h4>
+                <br>
+                <div style="margin-left: 5px; margin-top: 10px;">
+                    <select id="phcdata" style="width: 100px; height: 35px; border-radius: 5px;" name="Select">
+                        <option value="PHC"></option>
+                        <option value="PHC1">PHC Rann Kalabalge</option>
+                        <option value="PHC2">Gula PHC Shaffa Hawul</option>
+                        <option value="PHC3">Konduga PHC Konduga</option>
+                    </select>
+                </div><br>
+                <br><br>
+                <div style="text-align: center; margin-top: 10px;">
+    
+                    <button onclick="phcDataPage()" class="bt2" style="width: 25%;">Next</button>
+                
+                </div>
+    
             </div>
             
         </div>
