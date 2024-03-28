@@ -12,6 +12,14 @@
     window.location.href = 'dd2.html';
   }
 
+  function phcDataPage()
+  {
+    var phcdata = document.getElementById('phcdata').value;
+    sessionStorage.setItem('phcdata', phcdata); 
+    console.log(sessionStorage);
+    window.location.href = 'mdphc.html';
+  }
+
   function pDataPageFP()
   {
     var piddata = document.getElementById('piddata').value;
