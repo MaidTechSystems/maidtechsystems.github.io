@@ -70,6 +70,16 @@
                         <label>Prescription :</label><br>
                         <textarea id="Presc" style="width: 300px; height: 125px; resize: none; font-size: medium;"></textarea>
                     </div><br>
+
+                    <div style="margin-left: 10px; margin-top: 10px;">
+                        <label>Doctor Code :</label>
+                        <select id="Doctor" style="width: 100px; height: 35px; border-radius: 5px;" name="Select">
+                            <option value="Doc"></option>
+                            <option value="101">101</option>
+                            <option value="102">102</option>
+                            <option value="103">103</option>
+                        </select>
+                    </div><br>
                 
                 <br><br> 
                 <hr>
@@ -138,9 +148,19 @@ var FName = fname;
 var LName = lname;
 var Age = age;
 var Gender = gender;
+var Doctor = document.getElementById('Doctor').value; 
 var Diagnosis = document.getElementById('Diagnosis').value; 
 var AddInv = document.getElementById('AddInv').value;  
 var Presc = document.getElementById('Presc').value; 
+
+if (Doctor=="101"){
+    Doctor = "Dr Abubakar Kaka Sanda";
+    }else if (Doctor=="102"){
+    Doctor = "Dr Abba Suleiman Gumsuri";
+    }else if (Doctor=="103"){
+    Doctor = "Dr Bukar Ali Shettima";
+    }
+
 
 if(Diagnosis=="" || Presc==""){
   alert('Not saved! Please enter a Diagnosis & Prescription');
@@ -153,9 +173,13 @@ Age, Age,
 Gender, Gender,
 Diagnosis: Diagnosis,
 AddInv: AddInv,
-Presc : Presc
+Presc : Presc,
+Doctor, Doctor
 
 });
+
+//let chatRef = database.ref("/chats/MJy8cxO85ldEnDScsWZ");
+//    chatRef.remove();
 
 setTimeout(() => {
     window.location.href = 'dd1.html';
