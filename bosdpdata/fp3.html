@@ -48,7 +48,17 @@
             <!-- ==== Project Data Input Form ==== -->
             <div class="col-md-6">
                 <form>
-                    
+                    <div style="margin-left: 80px;">
+                        <label>Facility :</label>
+                        &nbsp; &nbsp;
+                        <select  id="PHC" style="width: 100px; height: 35px; border-radius: 5px;" name="Select">
+                            <option value="PHC"></option>
+                            <option value="PHC Rann">PHC Rann</option>
+                            <option value="Gula PHC Shaffa">Gula PHC Shaffa</option>
+                            <option value="Konduga PHC">Konduga PHC</option>
+                        </select>
+                    </div><br>
+
                     <div style="margin-left: 50px;">
                         <label>First Name :</label>
                         &nbsp; &nbsp;
@@ -133,7 +143,7 @@
                     <div style="margin-left: 50px; margin-top: 10px;">
                         <label>Symptoms <br> Duration :</label>
                         &nbsp; &nbsp;
-                        <input id="sd" type="text" style="height: 35px; width: 100px; border-radius: 2.5px; font-size: medium; border-radius: 5px;">
+                        <input id="sd" type="number" style="height: 35px; width: 100px; border-radius: 2.5px; font-size: medium; border-radius: 5px;">
                         &nbsp;&nbsp;<label>Days/Weeks/Months</label>
                     </div><br><br>
 
@@ -156,7 +166,7 @@
                     <div style="margin-left: 75px; margin-top: 10px;">
                         <label>Blood Pressure :</label>
                         &nbsp; &nbsp;
-                        <input id="bp" type="text" style="height: 35px; width: 100px; border-radius: 2.5px; font-size: medium; border-radius: 5px;">
+                        <input id="bp" type="number" style="height: 35px; width: 100px; border-radius: 2.5px; font-size: medium; border-radius: 5px;">
                     </div><br><br>
 
                     <div style="text-align: center; margin-top: 20px;">
@@ -290,6 +300,7 @@
 
 var randomnumber = Math.floor(Math.random() * (9999 - 1001 + 1)) + 1;
 var pid = randomnumber;
+var PHC = document.getElementById('PHC').value;
 var FirstName = document.getElementById('FirstName').value;  
 var LastName = document.getElementById('LastName').value;  
 var Age = document.getElementById('Age').value;
@@ -318,6 +329,7 @@ var Phone = document.getElementById('Phone').value;
 
   set(ref(database, 'Mamima_Patients/' + pid), {
 
+PHC: PHC,
 FirstName: FirstName,
 LastName: LastName,
 Age : Age,
